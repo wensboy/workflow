@@ -4,11 +4,6 @@
 # ====== workflow ====== #
 # ====================== #
 # ====================== #
-    
-init(){
-    
-}
-
 
 load_nvm(){
 	export NVM_DIR="$HOME/github/.nvm"
@@ -43,8 +38,6 @@ load_keybinds(){
 }
 
 main(){
-    # init all thing
-    init
 	# alias settings
 	load_alias
 	# zsh settings
