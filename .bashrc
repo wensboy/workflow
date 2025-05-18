@@ -11,9 +11,9 @@ update_ps(){
 	symbol='⇒'
 	if [[ "${last}" -ne 0 ]]; then
 		symbol='✘'
-		PS1='\e[36m[\u@\h]\e[0m(\e[33m\w$(git_branch=$(parse_git_branch); [[ -n ${git_branch} ]] && echo "\e[32m:\e[35m${git_branch}\e[0m"))\e[0m\e[31m${symbol}\e[0m '
+		PS1='\[\e[36m\][\u@\h]\[\e[0m\](\[\e[33m\]\w\[\e[0m\]$(git_branch=$(parse_git_branch); [[ -n ${git_branch} ]] && echo "\[\e[32m\]:\[\e[0m\]\[\e[35m\]${git_branch}\[\e[0m\]"))\[\e[31m\]${symbol}\[\e[0m\] '
 	else
-		PS1='\e[36m[\u@\h]\e[0m(\e[33m\w$(git_branch=$(parse_git_branch); [[ -n ${git_branch} ]] && echo "\e[32m:\e[35m${git_branch}\e[0m"))\e[0m\e[32m${symbol}\e[0m '
+		PS1='\[\e[36m\][\u@\h]\[\e[0m\](\[\e[33m\]\w\[\e[0m\]$(git_branch=$(parse_git_branch); [[ -n ${git_branch} ]] && echo "\[\e[32m\]:\[\e[0m\]\[\e[35m\]${git_branch}\[\e[0m\]"))\[\e[32m\]${symbol}\[\e[0m\] '
 	fi
 }
 
