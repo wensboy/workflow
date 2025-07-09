@@ -5,3 +5,5 @@
   - zsh
 - vim
 - nvim
+- win
+  - vscodium
