@@ -8,8 +8,10 @@ if s:options_switch
     set nocompatible 
     set number
     set wrap
+    set linebreak
     set relativenumber
-    set tabstop=4
+    set tabstop=8
+    set softtabstop=4
     set shiftwidth=4
     set expandtab
     set autoindent
@@ -19,9 +21,12 @@ if s:options_switch
     set incsearch
     set hlsearch
     set encoding=utf-8
-    set fileencodings=utf-8
+    set fileencodings=utf-8,gbk,latin1
     set nobackup
     set noswapfile
-    syntax on
     set showmatch
+    set cursorline
+    " set wildmenu
+    syntax on
+    filetype plugin indent on
 endif
