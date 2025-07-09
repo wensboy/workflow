@@ -19,7 +19,7 @@ update_ps(){
 
 # Alias habbit
 alias cls='clear'
-alias sr='source'
+alias so='source'
 alias ll='ls -al'
 
 # environment varible
