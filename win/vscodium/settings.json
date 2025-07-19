@@ -258,4 +258,5 @@
         }
     },
     "terminal.integrated.defaultProfile.windows": "Debian (WSL)",
+    "redhat.telemetry.enabled": false,
 }
