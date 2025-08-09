@@ -1,0 +1,69 @@
+[theme]
+theme = "modern"
+[icons]
+icons = "material-nf"
+[theme.overrides]
+idle_bg = "#1f1f28"
+idle_fg = "#dcd7ba"
+info_bg = "#7e9cd8"
+info_fg = "#1f1f28"
+good_bg = "#76946a"
+good_fg = "#1f1f28"
+warning_bg = "#c0a36e"
+warning_fg = "#1f1f28"
+critical_bg = "#c34043"
+critical_fg = "#dcd7ba"
+separator = " | "
+separator_bg = "#1f1f28"
+separator_fg = "#54546d"
+
+[[block]]
+block = "docker"
+interval = 2
+format = " $icon $running/$total "
+
+[[block]]
+block = "cpu"
+interval = 1
+format = " $icon $utilization "
+format_alt = " $icon $frequency "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used_percents "
+format_alt = " $icon $mem_used/$mem_total "
+interval = 30
+warning_mem = 80
+critical_mem = 95
+
+[[block]]
+block = "net"
+device = "wlp0s20f3"
+format = " $icon {$signal_strength $ssid |Wired connection} "
+interval = 5
+
+[[block]]
+block = "sound"
+driver = "alsa"
+format = " $icon {$volume.eng(w:2)}[$output_name]"
+device = "hw:1"
+step_width = 2
+
+[[block]]
+block = "backlight"
+device = "nvidia_wmi_ec_backlight"
+format = " $icon $brightness "
+step_width = 5
+
+[[block]]
+block = "time"
+interval = 60
+format = " $icon $timestamp "
+timezone = "Asia/Shanghai"
+
+[[block]]
+block = "battery"
+interval = 10
+format = " $icon $percentage "
+full_format = " $icon $percentage "
+empty_format = " $icon $percentage "

@@ -21,6 +21,7 @@ update_ps(){
 alias cls='clear'
 alias so='source'
 alias ll='ls -al'
+alias lh='ls -alh'
 
 # environment varible
 export PROMPT_COMMAND=update_ps
